@@ -1,6 +1,6 @@
 <?php 
 include 'database.php';
-$db = (); //isi dengan deklarasi method
+$db = new database (); //isi dengan deklarasi method
 ?>
 <h1>CRUD OOP PHP</h1>
 <h3>Data User</h3>
@@ -16,7 +16,7 @@ $db = (); //isi dengan deklarasi method
 	</tr>
 	<?php
 	$no = 1;
-	foreach($db->() as $x){ //panggil method tampil data dari class database
+	foreach($db->tampil_data() as $x){ //panggil method tampil data dari class database
 	?>
 	<tr>
 		<td><?php echo $no++; ?></td>

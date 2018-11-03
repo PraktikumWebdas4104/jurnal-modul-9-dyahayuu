@@ -1,6 +1,6 @@
 <?php 
 include 'database.php';
-$db = (); //isi dengan deklarasi method
+$db =new database (); //isi dengan deklarasi method
 ?>
 
 <h1>CRUD OOP PHP</h1>
@@ -8,9 +8,10 @@ $db = (); //isi dengan deklarasi method
 
 <form action="proses.php?aksi=update" method="post">
 <?php
-foreach($db->()($_GET['id']) as $d){ //panggil method edit dari class database
+foreach($db->edit($_GET['id']) as $d){ //panggil method edit dari class database
 ?>
-<table>
+	<table>
+
 	<tr>
 		<td>Nama</td>
 		<td>
